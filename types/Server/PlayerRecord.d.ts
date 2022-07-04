@@ -12,6 +12,8 @@ interface PlayerRecord {
 	slot: number;
 	frame: number;
 
+	hitPoints: number,
+
 	/** Bot AI */
 	waitTime: number;
 	/** Bot AI */
