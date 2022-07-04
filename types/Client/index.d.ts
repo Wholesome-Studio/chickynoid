@@ -34,6 +34,7 @@ export namespace ChickynoidClient {
 	export let OnCharacterModelCreated: Signal<(characterModel: CharacterModel) => void>;
 	export let OnCharacterModelDestroyed: Signal<(characterModel: CharacterModel) => void>;
 
+	
 	export const flags: {
 		HANDLE_CAMERA: boolean;
 	};
@@ -42,17 +43,19 @@ export namespace ChickynoidClient {
 	 * RunService events.
 	 */
 	export function Setup(this: typeof ChickynoidClient): void;
-
+	
 	/**
 	 * Map of userId to CharacterRecord.
 	 */
 	export function GetCharacters(this: typeof ChickynoidClient): Map<number, CharacterRecord>;
-
+	
 	export function RegisterMod(this: typeof ChickynoidClient, mod: ModuleScript): void;
-
+	
 	export function GetClientChickynoid(this: typeof ChickynoidClient): ClientChickynoid;
-
+	
 	export function DebugMarkAllPlayers(this: typeof ChickynoidClient, text: string): void;
+
+	export function GetCollisionRoot(this: typeof ChickynoidClient): BasePart;
 }
 export * from "./CharacterMod";
 export { ClientMods } from "./ClientMods";
